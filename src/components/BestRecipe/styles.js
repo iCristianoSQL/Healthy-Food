@@ -58,7 +58,6 @@ export const ButtonDiv = styled.button`
   width: 48%;
   height: 17%;
   border: none;
-  border-radius: 50px;
 
   button:nth-child(1) {
     border: none;
