@@ -5,11 +5,10 @@ export const ImageDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  h2:nth-child(1) {
+    width: 80%;
+    font-size: 50px;
+  }
 `;
 
 export const Image = styled.img``;
-
-export const SuggestionDiv = styled.div`
-  width: 55%;
-  position: relative;
-`;

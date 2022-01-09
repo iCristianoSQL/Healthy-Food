@@ -9,8 +9,6 @@ export const Section = styled.section`
 export const Title = styled.h2`
   color: #1d164d;
   font-family: Montserrat-Bold;
-  width: 80%;
-  font-size: 50px;
 `;
 
 export const DivInput = styled.div`
@@ -27,7 +25,6 @@ export const DivButton = styled.button`
   border: none;
   button:nth-child(1) {
     background-color: #badc58;
-    color: red;
     border: none;
     cursor: pointer;
     border-radius: 10%;
