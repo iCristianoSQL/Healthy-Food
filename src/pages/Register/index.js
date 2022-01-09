@@ -1,4 +1,4 @@
-import { Formik, Form as ContainerForm } from "formik";
+import { Formik, Form as ContainerForm, Field } from "formik";
 import requestToCep from "../../services/index";
 import React, { useCallback, useState } from "react";
 import Cep from "react-simple-cep-mask";
@@ -22,7 +22,7 @@ export const Register = () => {
     [getCepInfo]
   );
   return (
-    <div>
+    <>
       <Formik
         initialValues={{
           textCep: "",
@@ -35,25 +35,26 @@ export const Register = () => {
       >
         <ContainerForm>
           <Cep name="textCep" value={userChange} onChange={handleChange} />
-          <input
+          <Field
             type="text"
             disabled={userAddress.logradouro}
-            name="address"
             value={userAddress.logradouro}
+            name="address"
           />
-          <input
+          {console.log(userAddress.logradouro)}
+          <Field
             type="text"
             disabled={userAddress.bairro}
             name="district"
             value={userAddress.bairro}
           />
-          <input
+          <Field
             type="text"
             disabled={userAddress.localidade}
             name="location"
             value={userAddress.localidade}
           />
-          <input
+          <Field
             type="text"
             disabled={userAddress.uf}
             name="uf"
@@ -61,7 +62,7 @@ export const Register = () => {
           />
         </ContainerForm>
       </Formik>
-    </div>
+    </>
   );
 };
 
