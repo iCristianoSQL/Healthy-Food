@@ -4,12 +4,12 @@ import { Button } from "../index";
 /* Assets */
 import Lupa from "../../assets/png/Lupa.png";
 
-function SuggestionCard() {
+function SuggestionCard({ content, placeholder }) {
   return (
     <S.Section>
-      <S.Title>Ready for Trying a new recipe?</S.Title>
+      <S.Title content={content}>{content}</S.Title>
       <S.DivInput>
-        <S.Input type="text" placeholder="Search healthy recipes"></S.Input>
+        <S.Input type="text" placeholder={placeholder}></S.Input>
         <S.DivButton>
           <Button content={<S.Lupe src={Lupa} />} />
         </S.DivButton>
