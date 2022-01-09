@@ -1,10 +1,11 @@
-import { Nutrition, Header } from "../../components";
+import { Nutrition, Header, BestRecipe } from "../../components";
 
 const Home = () => {
   return (
     <>
       <Header />
       <Nutrition />
+      <BestRecipe />
     </>
   );
 };
