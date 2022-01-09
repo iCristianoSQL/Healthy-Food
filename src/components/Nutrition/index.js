@@ -7,7 +7,10 @@ import Illustration from "../../assets/svg/Illustration.svg";
 const Nutrition = () => {
   return (
     <S.ImageDiv>
-      <SuggestionCard />
+      <SuggestionCard
+        placeholder="Search healthy recipes"
+        content="Ready for Trying a new recipe?"
+      />
       <S.Image src={Illustration}></S.Image>
     </S.ImageDiv>
   );
