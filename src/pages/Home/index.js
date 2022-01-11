@@ -4,6 +4,7 @@ import {
   BestRecipe,
   BestServices,
   MainCarousel,
+  MemberShip,
 } from "../../components";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <BestRecipe />
       <BestServices />
       <MainCarousel />
+      <MemberShip />
     </>
   );
 };
