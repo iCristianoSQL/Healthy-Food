@@ -14,9 +14,21 @@ const MainCarousel = () => {
           }
         />
       </S.TextDiv>
-      <Carousel itemsToShow={3.5}>
-        {listCarousel.map(({ image, id }) => (
-          <S.Image key={id} src={image} />
+      <Carousel
+        itemsToShow={3.5}
+        easing="cubic-bezier(1,.15,.55,1.54)"
+        tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+        transitionMs={700}
+      >
+        {listCarousel.map(({ image, id, figCaption, profileImage, name }) => (
+          <S.Figure>
+            <S.Image key={id} src={image} />
+            <S.Legend>{figCaption}</S.Legend>
+            <S.Profile>
+              <S.ProfileImage src={profileImage} />
+              <S.Name>{name}</S.Name>
+            </S.Profile>
+          </S.Figure>
         ))}
       </Carousel>
     </S.Section>
