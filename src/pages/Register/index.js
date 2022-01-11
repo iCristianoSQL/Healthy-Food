@@ -1,68 +1,38 @@
 import { Formik, Form as ContainerForm, Field } from "formik";
 import requestToCep from "../../services/index";
-import React, { useCallback, useState } from "react";
-import Cep from "react-simple-cep-mask";
+import * as Yup from "yup";
 
-export const Register = () => {
-  const [userAddress, setAdress] = useState({});
-  const [userChange, setUserChange] = useState("");
-
-  const getCepInfo = useCallback(async (cep) => {
-    const requestCep = await requestToCep(cep);
-    setAdress(requestCep);
-  }, []);
-
-  const handleChange = useCallback(
-    (event) => {
-      if (event.length === 9) {
-        getCepInfo(event);
-      }
-      setUserChange(event);
-    },
-    [getCepInfo]
-  );
+const registerSchema = Yup.object().shape({
+  cep: Yup.string()
+    .min(8, "Este cep precisa ter 8 digitos")
+    .max(8, "Este cep precisa ter 8 digitos")
+    .required("Este campo é obrigatorio"),
+});
+const Register = () => {
   return (
-    <>
-      <Formik
-        initialValues={{
-          textCep: "",
-          address: "",
-          district: "",
-          uf: "",
-          location: "",
-        }}
-        enableReinitialize
-      >
+    <Formik
+      initialValues={{
+        cep: "",
+        address: "",
+        district: "",
+        uf: "",
+        location: "",
+      }}
+      validationSchema={registerSchema}
+      render={({ errors, touched, setFieldValue }) => (
         <ContainerForm>
-          <Cep name="textCep" value={userChange} onChange={handleChange} />
           <Field
-            type="text"
-            disabled={userAddress.logradouro}
-            value={userAddress.logradouro}
-            name="address"
+            name="cep"
+            onInput={(event) => requestToCep(event, setFieldValue)}
           />
-          {console.log(userAddress.logradouro)}
-          <Field
-            type="text"
-            disabled={userAddress.bairro}
-            name="district"
-            value={userAddress.bairro}
-          />
-          <Field
-            type="text"
-            disabled={userAddress.localidade}
-            name="location"
-            value={userAddress.localidade}
-          />
-          <Field
-            type="text"
-            disabled={userAddress.uf}
-            name="uf"
-            value={userAddress.uf}
-          />
+          {errors.cep && touched.cep && <p>{errors.cep}</p>}
+          <Field type="text" name="address" />
+          <Field type="text" name="district" />
+          <Field type="text" name="location" />
+          <Field type="text" name="uf" />
         </ContainerForm>
-      </Formik>
-    </>
+      )}
+    />
   );
 };
 
