@@ -5,6 +5,7 @@ import SuggestionCard from "./SuggestionCard";
 import BestRecipe from "./BestRecipe";
 import TitleAndParagraph from "./TitleAndParagraph";
 import BestServices from "./BestServices";
+import MainCarousel from "./Carousel";
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   BestRecipe,
   TitleAndParagraph,
   BestServices,
+  MainCarousel,
 };
