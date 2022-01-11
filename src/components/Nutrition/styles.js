@@ -11,4 +11,6 @@ export const ImageDiv = styled.div`
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  display: block;
+`;
