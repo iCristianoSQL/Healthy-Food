@@ -1,4 +1,10 @@
-import { Nutrition, Header, BestRecipe, BestServices } from "../../components";
+import {
+  Nutrition,
+  Header,
+  BestRecipe,
+  BestServices,
+  MainCarousel,
+} from "../../components";
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <Nutrition />
       <BestRecipe />
       <BestServices />
+      <MainCarousel />
     </>
   );
 };
