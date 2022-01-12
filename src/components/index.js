@@ -7,6 +7,7 @@ import TitleAndParagraph from "./TitleAndParagraph";
 import BestServices from "./BestServices";
 import MainCarousel from "./Carousel";
 import MemberShip from "./MemberShip";
+import CardBlog from "./CardBlog";
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   BestServices,
   MainCarousel,
   MemberShip,
+  CardBlog,
 };
