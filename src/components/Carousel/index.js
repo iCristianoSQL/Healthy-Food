@@ -1,9 +1,16 @@
-import Carousel from "react-elastic-carousel";
 import * as S from "./styles";
 import listCarousel from "./content";
 import { TitleAndParagraph } from "..";
 
 const MainCarousel = () => {
+  const breakPoint = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 850, itemsToShow: 3 },
+    { width: 1150, itemsToShow: 4 },
+    { width: 1450, itemsToShow: 5 },
+    { width: 1750, itemsToShow: 6 },
+  ];
   return (
     <S.Section>
       <S.TextDiv>
@@ -14,11 +21,15 @@ const MainCarousel = () => {
           }
         />
       </S.TextDiv>
-      <Carousel
-        itemsToShow={3.5}
-        easing="cubic-bezier(1,.15,.55,1.54)"
-        tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
-        transitionMs={700}
+      <S.Containercarousel
+        itemsToShow={2}
+        breakPoints={breakPoint}
+        pagination={false}
+        itemsToScroll={1}
+        itemPadding={[10]}
+        // easing="cubic-bezier(1,.15,.55,1.54)"
+        // tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+        // transitionMs={700}
       >
         {listCarousel.map(({ image, id, figCaption, profileImage, name }) => (
           <S.Figure>
@@ -30,7 +41,7 @@ const MainCarousel = () => {
             </S.Profile>
           </S.Figure>
         ))}
-      </Carousel>
+      </S.Containercarousel>
     </S.Section>
   );
 };
