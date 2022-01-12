@@ -7,7 +7,7 @@ export const Section = styled.section`
 `;
 
 export const Image = styled.img`
-  width: 50%;
+  width: 45rem;
 `;
 
 export const Content = styled.div`
@@ -21,13 +21,13 @@ export const Content = styled.div`
 export const Title = styled.h1`
   color: #1d164d;
   font-family: Montserrat-Bold;
-  font-size: 35px;
+  font-size: 2.1rem;
 `;
 
 export const Paragraph = styled.p`
   font-family: Mulish;
   color: #9e9baf;
-  font-size: 16px;
+  font-size: 1rems;
 `;
 
 export const ButtonDiv = styled.div`
@@ -37,7 +37,7 @@ export const ButtonDiv = styled.div`
   button:nth-child(1) {
     border: none;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 1rem;
     font-family: Mulish;
     background-color: #badc58;
     color: white;

@@ -19,7 +19,7 @@ export const Brand = styled.div`
 export const Title = styled.h1`
   font-family: Montserrat-Bold;
   color: #badc58;
-  font-size: 32px;
+  font-size: 2rem;
 `;
 
 export const Info = styled.div`
@@ -33,8 +33,10 @@ export const Info = styled.div`
 export const Links = styled.a`
   color: #ffffff;
   font-family: Mulish;
-  font-size: 16px;
+  font-size: 1rem;
+  margin-right: 2rem;
   text-decoration: none;
+  text-align: center;
 `;
 
 export const InfoContent = styled.div`
@@ -42,19 +44,18 @@ export const InfoContent = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 8%;
   justify-content: flex-start;
 `;
 
 export const DivButton = styled.div`
-  height: 48%;
-  width: 23%;
+  height: 2.8rem;
+  width: 7.5rem;
   button:nth-child(1) {
     border: none;
     border-radius: 6px;
     font-family: Mulish;
     color: #badc58;
-    font-size: 98%;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
   }

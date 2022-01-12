@@ -23,14 +23,15 @@ export const ArticleContent = styled.article`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 3.5rem;
+  margin-left: 3.5rem;
 `;
 
 export const GeneralContent = styled.div`
-  width: 45%;
   height: 30%;
   display: flex;
   justify-content: space-around;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 `;
 
 export const ImageDiv = styled.div`
@@ -48,13 +49,13 @@ export const ContentDiv = styled.div`
   justify-content: center;
 
   h1:nth-child(1) {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 200px;
     margin-bottom: 15px;
   }
 `;
 
-export const ButtonDiv = styled.button`
+export const ButtonDiv = styled.div`
   width: 48%;
   height: 17%;
   border: none;
@@ -63,6 +64,7 @@ export const ButtonDiv = styled.button`
     border: none;
     border-radius: 5px;
     font-family: Mulish;
+    font-size: 1rem;
     background-color: #badc58;
     color: white;
     cursor: pointer;

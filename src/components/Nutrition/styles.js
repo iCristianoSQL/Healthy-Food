@@ -7,10 +7,10 @@ export const ImageDiv = styled.div`
   justify-content: flex-end;
   h2:nth-child(1) {
     width: 80%;
-    font-size: 50px;
+    font-size: 3rem;
   }
 `;
 
 export const Image = styled.img`
-  display: block;
+  width: 55rem;
 `;

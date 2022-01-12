@@ -8,7 +8,7 @@ export const Section = styled.section`
   align-items: center;
   justify-content: flex-end;
   h2:nth-child(1) {
-    font-size: 38px;
+    font-size: 2.5rem;
     width: 75%;
   }
   input:nth-child(1) {
