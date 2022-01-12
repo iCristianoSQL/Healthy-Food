@@ -11,12 +11,19 @@ export const Section = styled.section`
     font-size: 2.5rem;
     width: 75%;
   }
+
+  }
   input:nth-child(1) {
     width: 65%;
     height: 55px;
+    @media screen and (max-width: 1920px) {
+      width: 45%;
+    }
   }
 `;
 
 export const Image = styled.img`
-  display: block;
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
 `;

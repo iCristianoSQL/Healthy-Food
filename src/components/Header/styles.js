@@ -6,6 +6,9 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   position: absolute;
+  @media screen and (max-width: 1300px) {
+    position: relative;
+  }
 `;
 
 export const Brand = styled.div`
@@ -37,6 +40,10 @@ export const Links = styled.a`
   margin-right: 2rem;
   text-decoration: none;
   text-align: center;
+  @media screen and (max-width: 1300px) {
+    color: #badc58;
+    font-weight: 700;
+  }
 `;
 
 export const InfoContent = styled.div`
@@ -45,6 +52,14 @@ export const InfoContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media screen and (max-width: 1920px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 1752px) {
+    width: 60%;
+    margin-left: 5rem;
+  } ;
 `;
 
 export const DivButton = styled.div`
@@ -58,5 +73,9 @@ export const DivButton = styled.div`
     font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
+    @media screen and (max-width: 1300px) {
+      background-color: #badc58;
+      color: white;
+    }
   }
 `;

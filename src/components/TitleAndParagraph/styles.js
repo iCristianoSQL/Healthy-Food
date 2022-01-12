@@ -4,6 +4,9 @@ export const Title = styled.h1`
   color: #1d164d;
   font-family: Montserrat-Bold;
   font-size: 2.1rem;
+  @media screen and (max-width: 1300px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const Paragraph = styled.p`

@@ -5,6 +5,9 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 1300px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const TitleDiv = styled.div`
@@ -32,6 +35,9 @@ export const GeneralContent = styled.div`
   display: flex;
   justify-content: space-around;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  @media screen and (max-width: 1920px) {
+    width: 35%;
+  }
 `;
 
 export const ImageDiv = styled.div`

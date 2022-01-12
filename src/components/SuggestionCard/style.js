@@ -4,6 +4,11 @@ export const Section = styled.section`
   width: 100%;
   height: 100%;
   margin-left: 4rem;
+  @media screen and (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h2`
@@ -17,9 +22,12 @@ export const DivInput = styled.div`
   align-items: center;
   gap: 2%;
   margin-top: 5%;
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
-export const DivButton = styled.button`
+export const DivButton = styled.div`
   width: 10%;
   height: 45px;
   border: none;
@@ -28,6 +36,9 @@ export const DivButton = styled.button`
     border: none;
     cursor: pointer;
     border-radius: 10%;
+    @media screen and (max-width: 1300px) {
+      width: 5rem;
+    }
   }
 `;
 
@@ -40,8 +51,4 @@ export const Input = styled.input`
   &::-webkit-input-placeholder {
     opacity: 0.7;
   }
-`;
-
-export const Lupe = styled.img`
-  width: 50%;
 `;
