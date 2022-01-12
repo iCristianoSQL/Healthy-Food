@@ -1,17 +1,14 @@
 import * as S from "./style";
 import { Button } from "../index";
 
-/* Assets */
-import Lupa from "../../assets/png/Lupa.png";
-
-function SuggestionCard({ content, placeholder }) {
+function SuggestionCard({ content, placeholder, contentButton }) {
   return (
     <S.Section>
       <S.Title content={content}>{content}</S.Title>
       <S.DivInput>
         <S.Input type="text" placeholder={placeholder}></S.Input>
         <S.DivButton>
-          <Button content={<S.Lupe src={Lupa} />} />
+          <Button contentButton={contentButton} />
         </S.DivButton>
       </S.DivInput>
     </S.Section>

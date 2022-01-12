@@ -21,7 +21,7 @@ const Header = () => {
             </S.Links>
           ))}
           <S.DivButton>
-            <Button onClick={toRegister} content={"REGISTER"} />
+            <Button onClick={toRegister} content={"REGISTER"}></Button>
           </S.DivButton>
         </S.InfoContent>
       </S.Info>
