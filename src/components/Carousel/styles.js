@@ -17,14 +17,14 @@ export const TextDiv = styled.div`
   margin: 25px 0px;
 `;
 
-export const Image = styled.img`
-  background-color: red;
-  border-radius: 15px;
+export const Image = styled.img``;
+
+export const Figure = styled.div`
+  margin: 0 1.5rem;
+  box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 20%);
 `;
 
-export const Figure = styled.figure``;
-
-export const Legend = styled.figcaption`
+export const Legend = styled.h3`
   color: #1d164d;
   font-family: Montserrat-Bold;
   font-size: 25px;
@@ -52,4 +52,15 @@ export const Name = styled.p`
   font-size: 16px;
 `;
 
-export const Containercarousel = styled(Carousel)``;
+export const Containercarousel = styled(Carousel)`
+  div:nth-child(1) {
+    margin: 0 0.6rem;
+    border-radius: 10px;
+  }
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+`;
