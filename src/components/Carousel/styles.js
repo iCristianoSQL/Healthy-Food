@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Carousel from "react-elastic-carousel";
 
 export const Section = styled.section`
   width: 100%;
@@ -50,3 +51,5 @@ export const Name = styled.p`
   color: #9e9baf;
   font-size: 16px;
 `;
+
+export const Containercarousel = styled(Carousel)``;
