@@ -27,6 +27,7 @@ export const Content = styled.div`
   flex-direction: column;
   @media screen and (max-width: 1300px) {
     align-items: center;
+    width: 100%;
   }
 `;
 

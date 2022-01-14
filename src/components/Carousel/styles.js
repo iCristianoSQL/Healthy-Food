@@ -8,10 +8,6 @@ export const ContainerReadBlog = styled.section`
   background: #fafafc;
   padding: 4rem 0 4rem 2rem;
   max-width: 100vw;
-  p:nth-child(2) {
-    text-align: center;
-    width: 31rem;
-  }
 
   @media screen and (max-width: 1024px) {
     padding: 4rem 0;
@@ -70,4 +66,20 @@ export const SVGArrowRight = styled(BsArrowRight)`
   width: 2.3rem;
   height: 2.3rem;
   background: #fff;
+`;
+
+export const TitleDiv = styled.div`
+  margin: 25px 0px 0px 0px;
+  gap: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  div:nth-child(1) {
+    width: 100%;
+  }
+  p:nth-child(2) {
+    max-width: 39.75rem;
+  }
 `;

@@ -8,17 +8,22 @@ export const ImageDiv = styled.div`
   @media screen and (max-width: 1300px) {
     flex-direction: column;
   }
+  @media screen and (max-width: 1000px) {
+    padding-top: 7rem;
+  }
+
   h2:nth-child(1) {
     width: 80%;
     font-size: 3rem;
     @media screen and (max-width: 1920px) {
-      width: 55%;
+      width: 40rem;
     }
-    @media screen and (max-width: 1490px) {
+    @media screen and (max-width: 1571px) {
       width: 85%;
     }
     @media screen and (max-width: 1300px) {
       text-align: center;
+      width: 100%;
     }
   }
   input:nth-child(1) {
@@ -30,6 +35,7 @@ export const ImageDiv = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-left: 0;
     }
   }
 `;

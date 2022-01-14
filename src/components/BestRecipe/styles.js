@@ -13,11 +13,17 @@ export const Section = styled.section`
 export const TitleDiv = styled.div`
   margin: 25px 0px 25px 0px;
   gap: 15px;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  div:nth-child(1) {
+    width: 100%;
+  }
+  p:nth-child(2) {
+    max-width: 39.75rem;
+  }
 `;
 
 export const ArticleContent = styled.article`
@@ -28,20 +34,35 @@ export const ArticleContent = styled.article`
   justify-content: center;
   gap: 3.5rem;
   margin-left: 3.5rem;
+  @media screen and (max-width: 1920px) {
+    padding: 0px 70px;
+  }
+  @media screen and (max-width: 1830px) {
+    padding: 0 20px;
+  }
 `;
 
 export const GeneralContent = styled.div`
-  height: 30%;
+  border-radius: 7px;
+  box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
   display: flex;
-  justify-content: space-around;
-  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-  @media screen and (max-width: 1920px) {
-    width: 35%;
+  max-width: 35rem;
+  overflow: hidden;
+  width: 100%;
+  @media screen and (max-width: 630px) {
+    max-width: 30rem;
+  }
+  @media screen and (max-width: 560px) {
+    max-width: 27rem;
   }
 `;
 
 export const ImageDiv = styled.div`
-  width: 40%;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  /* width: 40%; */
 `;
 
 export const Image = styled.img`
@@ -49,21 +70,21 @@ export const Image = styled.img`
 `;
 
 export const ContentDiv = styled.div`
-  width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 50%;
 
   h1:nth-child(1) {
     font-size: 1.5rem;
-    width: 200px;
     margin-bottom: 15px;
   }
 `;
 
 export const ButtonDiv = styled.div`
-  width: 48%;
-  height: 17%;
+  width: 7.5rem;
+  height: 3.5rem;
   border: none;
 
   button:nth-child(1) {
