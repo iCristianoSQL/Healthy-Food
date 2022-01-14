@@ -26,9 +26,15 @@ export const Section = styled.section`
       width: 35rem;
     }
   }
+  section:nth-child(1){
+    width: 75rem;
+  }
 `;
 
 export const Image = styled.img`
+  @media screen and (max-width: 1330px) {
+    margin-right: -25px;
+  }
   @media screen and (max-width: 1300px) {
     display: none;
   }

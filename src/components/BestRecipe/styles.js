@@ -40,6 +40,10 @@ export const ArticleContent = styled.article`
   @media screen and (max-width: 1830px) {
     padding: 0 20px;
   }
+  @media screen and (max-width: 560px) {
+    padding: 0px;
+    margin-left: 0;
+  }
 `;
 
 export const GeneralContent = styled.div`
@@ -48,12 +52,14 @@ export const GeneralContent = styled.div`
   display: flex;
   max-width: 35rem;
   overflow: hidden;
-  width: 100%;
   @media screen and (max-width: 630px) {
     max-width: 30rem;
   }
   @media screen and (max-width: 560px) {
-    max-width: 27rem;
+    width: 27rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -62,7 +68,12 @@ export const ImageDiv = styled.div`
   height: 100%;
   overflow: hidden;
   width: 50%;
-  /* width: 40%; */
+  @media screen and (max-width: 560px) {
+    width: 65%;
+  }
+  @media screen and (max-width: 560px) {
+    width: 70%;
+  }
 `;
 
 export const Image = styled.img`
@@ -75,10 +86,19 @@ export const ContentDiv = styled.div`
   justify-content: space-between;
   padding: 2rem;
   width: 50%;
-
+  @media screen and (max-width: 560px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
   h1:nth-child(1) {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    @media screen and (max-width: 560px) {
+      width: 75%;
+    }
   }
 `;
 
