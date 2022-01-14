@@ -1,10 +1,10 @@
-export const inputMask = (event, name) => {
+export const inputMask = (event, nameMask) => {
   const {
     target: { value },
   } = event;
 
   const masks = {
-    username: (value) => value.replace(/\[^\w]/g, ""),
+    name: (value) => value.replace(/\[^\w]/g, ""),
     cpf: (value) =>
       value
         .replace(/\D+/g, "")
@@ -19,5 +19,5 @@ export const inputMask = (event, name) => {
         .replace(/(-\d{3})\d+?$/, "$1"),
   };
 
-  return (event.target.value = masks[name](value));
+  return (event.target.value = masks[nameMask](value));
 };
