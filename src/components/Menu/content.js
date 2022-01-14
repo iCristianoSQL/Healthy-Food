@@ -1,18 +1,20 @@
+import * as S from "../MemberShip/styles";
+
 const listButton = [
   {
     id: 1,
     content: "HEALTHY RECIPES",
-    link: "#",
+    link: "#bestrecipe",
   },
   {
     id: 2,
     content: "BLOG",
-    link: "#",
+    link: "#carousel",
   },
   {
     id: 3,
     content: "JOIN",
-    link: "#",
+    link: "#membership",
   },
 ];
 

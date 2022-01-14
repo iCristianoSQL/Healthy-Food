@@ -8,7 +8,7 @@ import MemberShipImage from "../../assets/svg/MemberShip.svg";
 
 const MemberShip = () => {
   return (
-    <S.Section>
+    <S.Section id="membership">
       <SuggestionCard
         placeholder={"Enter your email address"}
         content={"Join our membership to get special offer"}

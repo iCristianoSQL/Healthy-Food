@@ -23,7 +23,7 @@ const MainCarousel = () => {
   };
 
   return (
-    <S.ContainerReadBlog>
+    <S.ContainerReadBlog id="carousel">
       <S.TitleDiv>
         <TitleAndParagraph contentH="Read Our Blog" contentP={contentP} />
       </S.TitleDiv>

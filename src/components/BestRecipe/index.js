@@ -7,7 +7,7 @@ import foodList from "./content";
 
 const BestRecipe = () => {
   return (
-    <S.Section>
+    <S.Section id="bestrecipe">
       <S.TitleDiv>
         <TitleAndParagraph
           contentP="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
