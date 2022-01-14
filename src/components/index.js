@@ -8,6 +8,8 @@ import BestServices from "./BestServices";
 import MainCarousel from "./Carousel";
 import MemberShip from "./MemberShip";
 import CardBlog from "./CardBlog";
+import Menu from "./Menu";
+import Input from "./Input";
 
 export {
   Button,
@@ -20,4 +22,6 @@ export {
   MainCarousel,
   MemberShip,
   CardBlog,
+  Menu,
+  Input,
 };
