@@ -10,6 +10,12 @@ export const Section = styled.section`
   h2:nth-child(1) {
     font-size: 2.5rem;
     width: 75%;
+  @media screen and (max-width: 1920px) {
+    width: 40rem;
+    }
+     @media screen and (max-width: 1300px) {
+      text-align: center;
+    }
   }
 
   }
@@ -17,7 +23,7 @@ export const Section = styled.section`
     width: 65%;
     height: 55px;
     @media screen and (max-width: 1920px) {
-      width: 45%;
+      width: 35rem;
     }
   }
 `;
