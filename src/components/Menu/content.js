@@ -1,5 +1,3 @@
-import * as S from "../MemberShip/styles";
-
 const listButton = [
   {
     id: 1,
