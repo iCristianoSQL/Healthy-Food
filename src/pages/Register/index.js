@@ -1,13 +1,18 @@
 import * as S from "./styles";
+
+/* Libs */
 import { Formik } from "formik";
 import requestToCep from "../../services/index";
-import { inputMask } from "../../utils/inputMask";
 import { toast } from "react-toastify";
-
-import { TitleAndParagraph, Input, Button } from "../../components/index";
-import { registerSchema } from "./registerSchema";
-import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
+import { useHistory } from "react-router-dom";
+
+/* Content */
+import { registerSchema } from "./registerSchema";
+
+/* Components */
+import { TitleAndParagraph, Input, Button } from "../../components/index";
+import { inputMask } from "../../utils/inputMask";
 
 const Register = () => {
   const history = useHistory();

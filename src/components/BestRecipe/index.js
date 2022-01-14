@@ -1,5 +1,8 @@
 import * as S from "./styles";
+/* Components */
 import { TitleAndParagraph, Button } from "..";
+
+/* Content */
 import foodList from "./content";
 
 const BestRecipe = () => {

@@ -1,4 +1,6 @@
 import * as S from "./styles";
+
+/* Components */
 import { Menu } from "..";
 
 const Header = () => {

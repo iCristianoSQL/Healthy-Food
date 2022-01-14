@@ -1,6 +1,12 @@
 import * as S from "./styles";
+
+/* Content */
 import listButton from "./content";
+
+/* Components */
 import { Button } from "../index";
+
+/* Libs */
 import { useHistory } from "react-router-dom";
 
 const Menu = () => {

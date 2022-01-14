@@ -1,5 +1,8 @@
 import * as S from "./styles";
+
+/*Content */
 import listTerms from "./content";
+
 const Footer = () => {
   return (
     <S.Footer>

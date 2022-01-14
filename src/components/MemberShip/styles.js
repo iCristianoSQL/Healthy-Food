@@ -6,9 +6,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* @media screen and (max-width: 650px) {
-    width: 100%;
-    } */
+
   button:nth-child(1){
     color: white;
         font-family: Mulish;

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+/* Libs */
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 export const ContainerReadBlog = styled.section`

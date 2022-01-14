@@ -1,6 +1,12 @@
-import { useRef } from "react";
 import * as S from "./styles";
+
+/* React */
+import { useRef } from "react";
+
+/*Content */
 import listCarousel from "./content";
+
+/* Components */
 import { TitleAndParagraph, CardBlog } from "..";
 
 const MainCarousel = () => {

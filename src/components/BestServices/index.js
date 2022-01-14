@@ -1,5 +1,9 @@
 import * as S from "./styles";
+
+/* Content */
 import listParagraph from "./content";
+
+/* Components */
 import { Button } from "..";
 
 /* Assets */
