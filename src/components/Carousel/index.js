@@ -18,7 +18,9 @@ const MainCarousel = () => {
 
   return (
     <S.ContainerReadBlog>
-      <TitleAndParagraph contentH="Read Our Blog" contentP={contentP} />
+      <S.TitleDiv>
+        <TitleAndParagraph contentH="Read Our Blog" contentP={contentP} />
+      </S.TitleDiv>
       <S.ScrollCardsBlog>
         <S.ContainerCards ref={carousel}>
           {listCarousel.map(({ id, image, figCaption, profileImage, name }) => {
