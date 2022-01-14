@@ -101,7 +101,8 @@ const Register = () => {
                     placeholder="00000-000"
                     errors={errors}
                     touched={touched}
-                    onInput={(event) => requestToCep(event, setFieldValue)}
+                    onBlur={(event) => requestToCep(event, setFieldValue)}
+                    onInput={(event) => inputMask(event, "cep")}
                   />
 
                   <Input
