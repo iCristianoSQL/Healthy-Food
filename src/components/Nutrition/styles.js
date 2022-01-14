@@ -21,6 +21,9 @@ export const ImageDiv = styled.div`
     @media screen and (max-width: 1571px) {
       width: 85%;
     }
+    @media screen and (max-width: 1310px) {
+      width: 90%;
+    }
     @media screen and (max-width: 1300px) {
       text-align: center;
       width: 100%;

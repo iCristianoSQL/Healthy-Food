@@ -65,6 +65,9 @@ export const DivButton = styled.div`
     @media screen and (max-width: 1000px) {
       display: none;
     }
+    @media screen and (max-width: 1100px) {
+      width: 6rem;
+    }
   }
 `;
 /* Menu Hamburger */
