@@ -92,7 +92,6 @@ const Register = () => {
                     errors={errors}
                     touched={touched}
                     onInput={(event) => requestToCep(event, setFieldValue)}
-                    onBlur={(event) => inputMask(event, "cep")}
                   />
 
                   <Input

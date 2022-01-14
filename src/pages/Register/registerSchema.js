@@ -6,7 +6,7 @@ export const registerSchema = Yup.object().shape({
   cpf: Yup.string().required(""),
   cep: Yup.string()
     .min(8, "This field must have eight digits")
-    .max(8, "This field must have eight digits")
+    .max(9, "This field must have eight digits")
     .required(""),
   address: Yup.string().required(""),
   district: Yup.string().required(""),
