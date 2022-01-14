@@ -73,7 +73,7 @@ export const DivButton = styled.div`
 /* Menu Hamburger */
 export const MenuHamburger = styled.div`
   @media screen and (max-width: 1000px) {
-    background-color: #badc58;
+    background-color: #1d164d;
     display: block;
     width: 30px;
     height: 2px;
@@ -84,7 +84,7 @@ export const MenuHamburger = styled.div`
     &:before,
     &:after {
       content: "";
-      background-color: #badc58;
+      background-color: #1d164d;
       display: block;
       width: 100%;
       height: 100%;
@@ -107,7 +107,7 @@ export const BurgerDiv = styled.div`
     width: 3rem;
     height: 3rem;
     position: relative;
-    background-color: #1d164d;
+    background-color: #badc58;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,7 @@ export const InputChecked = styled.input`
 
 export const SectionMenu = styled.section`
   @media screen and (max-width: 1000px) {
-    background-color: #9e9baf;
+    background-color: rgba(18, 52, 86, 0.9);
     position: fixed;
     z-index: 2;
     width: 350px;

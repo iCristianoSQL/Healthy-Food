@@ -11,7 +11,8 @@ export const Header = styled.header`
   }
   @media screen and (max-width: 1000px) {
     position: fixed;
-    background-color: #9e9baf;
+    background-color: rgba(18, 52, 86, 0.9);
+
     transition: 0.5s;
     z-index: 10;
   }

@@ -28,6 +28,8 @@ export const Section = styled.section`
 
   }
   input:nth-child(1) {
+    border-radius: 0.5rem;
+    outline: none
     width: 65%;
     height: 55px;
       @media screen and (max-width: 1920px) {

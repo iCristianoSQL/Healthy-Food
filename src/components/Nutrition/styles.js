@@ -34,6 +34,8 @@ export const ImageDiv = styled.div`
   }
   input:nth-child(1) {
     max-width: 25rem;
+    border-radius: 0.5rem;
+    outline: none;
     @media screen and (max-width: 650px) {
       height: 2rem;
     }

@@ -16,7 +16,7 @@ export const Input = styled(Field)`
   color: #1d164d;
   width: 55%;
   border-radius: 2rem;
-  padding-left: 0.2rem;
+  padding: 0.2rem;
 `;
 
 export const Label = styled.label`
