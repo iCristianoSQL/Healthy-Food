@@ -75,13 +75,23 @@ const Register = () => {
                   />
 
                   <Input
+                    type="date"
+                    span="*"
+                    title="Date:"
+                    name="date"
+                    placeholder="00/00/0000"
+                    errors={errors}
+                    touched={touched}
+                  />
+
+                  <Input
                     span="*"
                     title="CPF:"
                     name="cpf"
                     placeholder="123.321.456-65"
                     errors={errors}
                     touched={touched}
-                    onBlur={(event) => inputMask(event, "cpf")}
+                    onInput={(event) => inputMask(event, "cpf")}
                   />
 
                   <Input
