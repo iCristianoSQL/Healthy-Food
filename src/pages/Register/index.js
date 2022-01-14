@@ -37,6 +37,9 @@ const Register = () => {
             onSubmit={(values) => {
               localStorage.setItem("user", JSON.stringify(values));
               Cookies.set("userCookies", JSON.stringify(values));
+              setTimeout(() => {
+                toHome();
+              }, 1000);
             }}
             render={({ errors, touched, setFieldValue }) => {
               return (
@@ -48,7 +51,7 @@ const Register = () => {
                     placeholder="type your name"
                     errors={errors}
                     touched={touched}
-                    onInput={(event) => inputMask(event, "name")}
+                    onBlur={(event) => inputMask(event, "name")}
                   />
 
                   <Input
@@ -58,7 +61,7 @@ const Register = () => {
                     placeholder="123.321.456-65"
                     errors={errors}
                     touched={touched}
-                    onInput={(event) => inputMask(event, "cpf")}
+                    onBlur={(event) => inputMask(event, "cpf")}
                   />
 
                   <Input
@@ -69,7 +72,7 @@ const Register = () => {
                     errors={errors}
                     touched={touched}
                     onInput={(event) => requestToCep(event, setFieldValue)}
-                    onInput={(event) => inputMask(event, "cep")}
+                    onBlur={(event) => inputMask(event, "cep")}
                   />
 
                   <Input
