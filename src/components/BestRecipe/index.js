@@ -12,8 +12,8 @@ const BestRecipe = () => {
         />
       </S.TitleDiv>
       <S.ArticleContent>
-        {foodList.map(({ image, title }) => (
-          <S.GeneralContent>
+        {foodList.map(({ image, title, id }) => (
+          <S.GeneralContent key={id}>
             <S.ImageDiv>
               <S.Image src={image} />
             </S.ImageDiv>
