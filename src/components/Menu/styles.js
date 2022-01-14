@@ -104,8 +104,8 @@ export const PositionBurgerDiv = styled.div``;
 
 export const BurgerDiv = styled.div`
   @media screen and (max-width: 1000px) {
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     position: relative;
     background-color: #1d164d;
     display: flex;

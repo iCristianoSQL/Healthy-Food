@@ -3,7 +3,6 @@ import SuggestionCard from "../SuggestionCard";
 
 /* Assets */
 import Illustration from "../../assets/svg/Illustration.svg";
-import { AiOutlineSearch } from "react-icons/ai";
 
 const Nutrition = () => {
   return (
@@ -11,7 +10,7 @@ const Nutrition = () => {
       <SuggestionCard
         placeholder="Search healthy recipes"
         content="Ready for Trying a new recipe?"
-        contentButton={<AiOutlineSearch />}
+        contentButton={<S.Search />}
       />
       <S.Image src={Illustration}></S.Image>
     </S.ImageDiv>

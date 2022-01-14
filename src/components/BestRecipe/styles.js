@@ -52,6 +52,7 @@ export const GeneralContent = styled.div`
   display: flex;
   max-width: 35rem;
   overflow: hidden;
+  padding: 1rem;
   @media screen and (max-width: 630px) {
     max-width: 30rem;
   }

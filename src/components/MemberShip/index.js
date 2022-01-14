@@ -10,6 +10,7 @@ const MemberShip = () => {
       <SuggestionCard
         placeholder={"Enter your email address"}
         content={"Join our membership to get special offer"}
+        contentButton={"Join"}
       />
       <S.Image src={MemberShipImage} />
     </S.Section>

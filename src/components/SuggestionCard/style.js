@@ -25,9 +25,6 @@ export const DivInput = styled.div`
   @media screen and (max-width: 1300px) {
     justify-content: center;
   }
-  @media screen and (max-width: 650px) {
-    width: 60%;
-  }
 `;
 
 export const DivButton = styled.div`
@@ -35,8 +32,8 @@ export const DivButton = styled.div`
   height: 3.5rem;
   border: none;
   @media screen and (max-width: 650px) {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 2rem;
   }
   button:nth-child(1) {
     background-color: #badc58;
@@ -46,15 +43,22 @@ export const DivButton = styled.div`
   }
 `;
 
+export const Button = styled.button`
+  width: 100%;
+  height: 100%;
+  background-color: #badc58;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+`;
+
 export const Input = styled.input`
   width: 80%;
   height: 3.4rem;
   font-family: Mulish;
   font-size: 18px;
   padding-left: 18px;
-  @media screen and (max-width: 650px) {
-    height: 2.5rem;
-  }
+
   &::-webkit-input-placeholder {
     opacity: 0.7;
   }

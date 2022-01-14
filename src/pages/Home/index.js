@@ -5,6 +5,7 @@ import {
   BestServices,
   MainCarousel,
   MemberShip,
+  Footer,
 } from "../../components";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <BestServices />
       <MainCarousel />
       <MemberShip />
+      <Footer />
     </>
   );
 };

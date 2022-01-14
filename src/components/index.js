@@ -10,6 +10,7 @@ import MemberShip from "./MemberShip";
 import CardBlog from "./CardBlog";
 import Menu from "./Menu";
 import Input from "./Input";
+import Footer from "./Footer";
 
 export {
   Button,
@@ -24,4 +25,5 @@ export {
   CardBlog,
   Menu,
   Input,
+  Footer,
 };

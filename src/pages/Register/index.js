@@ -2,6 +2,7 @@ import * as S from "./styles";
 import { Formik } from "formik";
 import requestToCep from "../../services/index";
 import { inputMask } from "../../utils/inputMask";
+import { toast } from "react-toastify";
 
 import { TitleAndParagraph, Input, Button } from "../../components/index";
 import { registerSchema } from "./registerSchema";
@@ -35,11 +36,25 @@ const Register = () => {
             }}
             validationSchema={registerSchema}
             onSubmit={(values) => {
+              //Local Storage and Cookies
               localStorage.setItem("user", JSON.stringify(values));
+
+              let userValue = localStorage.getItem("user");
+              userValue = JSON.parse(userValue);
+
               Cookies.set("userCookies", JSON.stringify(values));
+
+              toast.success(
+                `Welcome ${userValue.name}, your registration was created successfully`,
+                {
+                  position: "bottom-right",
+                  autoClose: 5000,
+                }
+              );
+
               setTimeout(() => {
                 toHome();
-              }, 1000);
+              }, 5000);
             }}
             render={({ errors, touched, setFieldValue }) => {
               return (

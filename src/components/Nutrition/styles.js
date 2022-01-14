@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+/*Assets*/
+import { AiOutlineSearch } from "react-icons/ai";
+
 export const ImageDiv = styled.div`
   width: 100%;
   display: flex;
@@ -31,6 +34,9 @@ export const ImageDiv = styled.div`
   }
   input:nth-child(1) {
     max-width: 25rem;
+    @media screen and (max-width: 650px) {
+      height: 2rem;
+    }
   }
   section:nth-child(1) {
     @media screen and (max-width: 1300px) {
@@ -50,4 +56,8 @@ export const Image = styled.img`
   }
 `;
 
-export const Search = styled.img``;
+export const Search = styled(AiOutlineSearch)`
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+`;

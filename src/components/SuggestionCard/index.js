@@ -1,5 +1,4 @@
 import * as S from "./style";
-import { Button } from "../index";
 
 function SuggestionCard({ content, placeholder, contentButton }) {
   return (
@@ -8,7 +7,7 @@ function SuggestionCard({ content, placeholder, contentButton }) {
       <S.DivInput>
         <S.Input type="text" placeholder={placeholder}></S.Input>
         <S.DivButton>
-          <Button contentButton={contentButton} />
+          <S.Button contentButton={contentButton}>{contentButton}</S.Button>
         </S.DivButton>
       </S.DivInput>
     </S.Section>

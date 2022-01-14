@@ -39,8 +39,8 @@ export const TextDiv = styled.div`
 `;
 
 export const RegisterDiv = styled.div`
-  height: 80%;
-  width: 30%;
+  height: 32rem;
+  width: 29rem;
   background-color: white;
   border-radius: 10px;
   box-shadow: #badc58 0px 0px 0px 2px inset,
@@ -48,6 +48,13 @@ export const RegisterDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  transition: 0.5s;
+  @media (max-width: 500px) {
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+  }
 `;
 
 export const ContainerForm = styled(Form)`
