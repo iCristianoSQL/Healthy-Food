@@ -1,16 +1,19 @@
 import * as S from "./styles";
-import { Formik, Form as ContainerForm, Field } from "formik";
+import { Formik } from "formik";
 import requestToCep from "../../services/index";
-import * as Yup from "yup";
-import { TitleAndParagraph } from "../../components/index";
+import { toast } from "react-toastify";
+import { inputMask } from "../../utils/inputMask";
 
-const registerSchema = Yup.object().shape({
-  cep: Yup.string()
-    .min(8, "Este cep precisa ter 8 digitos")
-    .max(8, "Este cep precisa ter 8 digitos")
-    .required("Este campo é obrigatorio"),
-});
+import { TitleAndParagraph, Input, Button } from "../../components/index";
+import { registerSchema } from "./registerSchema";
+import { useHistory } from "react-router-dom";
+import Cookies from "js-cookie";
+
 const Register = () => {
+  const history = useHistory();
+  const toHome = () => {
+    history.push("/");
+  };
   return (
     <S.Global>
       <S.Section>
@@ -23,26 +26,95 @@ const Register = () => {
           </S.TextDiv>
           <Formik
             initialValues={{
+              name: "",
               cep: "",
               address: "",
               district: "",
               uf: "",
               location: "",
+              cpf: "",
             }}
             validationSchema={registerSchema}
-            render={({ errors, touched, setFieldValue }) => (
-              <ContainerForm>
-                <Field
-                  name="cep"
-                  onInput={(event) => requestToCep(event, setFieldValue)}
-                />
-                {errors.cep && touched.cep && <p>{errors.cep}</p>}
-                <Field type="text" name="address" />
-                <Field type="text" name="district" />
-                <Field type="text" name="location" />
-                <Field type="text" name="uf" />
-              </ContainerForm>
-            )}
+            onSubmit={(values) => {
+              localStorage.setItem("user", JSON.stringify(values));
+              Cookies.set("userCok", JSON.stringify(values));
+              setTimeout(() => {
+                toHome();
+              }, 1000);
+            }}
+            render={({ errors, touched, setFieldValue }) => {
+              return (
+                <S.ContainerForm>
+                  <Input
+                    span="*"
+                    title="Name:"
+                    name="name"
+                    placeholder="type your name"
+                    errors={errors}
+                    touched={touched}
+                  />
+
+                  <Input
+                    span="*"
+                    title="CPF:"
+                    name="cpf"
+                    placeholder="123.321.456-65"
+                    errors={errors}
+                    touched={touched}
+                    onChange={(event, name) => inputMask(event, name)}
+                  />
+
+                  <Input
+                    span="*"
+                    title="Postal Code:"
+                    name="cep"
+                    placeholder="00000-000"
+                    errors={errors}
+                    touched={touched}
+                    onInput={(event) => requestToCep(event, setFieldValue)}
+                  />
+
+                  <Input
+                    span="*"
+                    title="Neighborhood:"
+                    name="district"
+                    placeholder="brooklyn"
+                    errors={errors}
+                    touched={touched}
+                  />
+
+                  <Input
+                    span="*"
+                    title="Address:"
+                    name="address"
+                    placeholder="hamilton ave"
+                    errors={errors}
+                    touched={touched}
+                  />
+
+                  <Input
+                    span="*"
+                    title="City:"
+                    name="location"
+                    placeholder="new york"
+                    errors={errors}
+                    touched={touched}
+                  />
+
+                  <Input
+                    span="*"
+                    title="UF:"
+                    name="uf"
+                    placeholder="NY"
+                    errors={errors}
+                    touched={touched}
+                  />
+                  <S.DivButton>
+                    <Button type="submit" content="REGISTER" />
+                  </S.DivButton>
+                </S.ContainerForm>
+              );
+            }}
           />
         </S.RegisterDiv>
       </S.Section>
