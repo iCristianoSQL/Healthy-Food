@@ -14,14 +14,15 @@ const Menu = () => {
   const toRegister = () => {
     history.push("/register");
   };
+  const buttonContent = listButton.map(({ content, id, link }) => (
+    <S.GenericLinks href={link} key={id}>
+      {content}
+    </S.GenericLinks>
+  ));
   return (
     <S.Info>
       <S.InfoContent>
-        {listButton.map(({ content, id, link }) => (
-          <S.Links href={link} key={id}>
-            {content}
-          </S.Links>
-        ))}
+        {buttonContent}
         <S.DivButton>
           <Button onClick={toRegister} content={"REGISTER"}></Button>
         </S.DivButton>
@@ -34,11 +35,7 @@ const Menu = () => {
           </S.PositionBurgerDiv>
         </label>
         <S.SectionMenu>
-          {listButton.map(({ content, id, link }) => (
-            <S.MenuLinks href={link} key={id}>
-              {content}
-            </S.MenuLinks>
-          ))}
+          {buttonContent}
           <S.MenuButton>
             <Button onClick={toRegister} content={"REGISTER"}></Button>
           </S.MenuButton>

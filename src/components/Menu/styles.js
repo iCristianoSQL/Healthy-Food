@@ -19,6 +19,22 @@ export const InfoContent = styled.nav`
   align-items: center;
   justify-content: flex-start;
 
+  a:nth-child(1n) {
+    color: #ffffff;
+    font-family: Mulish;
+    font-size: 1rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    text-align: center;
+    @media screen and (max-width: 1300px) {
+      color: #badc58;
+      font-weight: 700;
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 1920px) {
     width: 45%;
   }
@@ -28,21 +44,7 @@ export const InfoContent = styled.nav`
   }
 `;
 
-export const Links = styled.a`
-  color: #ffffff;
-  font-family: Mulish;
-  font-size: 1rem;
-  margin-right: 2rem;
-  text-decoration: none;
-  text-align: center;
-  @media screen and (max-width: 1300px) {
-    color: #badc58;
-    font-weight: 700;
-  }
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
-`;
+export const GenericLinks = styled.a``;
 
 export const DivButton = styled.div`
   height: 2.8rem;
@@ -145,6 +147,18 @@ export const InputChecked = styled.input`
 `;
 
 export const SectionMenu = styled.section`
+  a:nth-child(1n) {
+    display: none;
+    @media screen and (max-width: 1000px) {
+      margin-right: 0px;
+      margin-top: 1.5rem;
+      display: block;
+      color: #badc58;
+      font-family: Mulish;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+  }
   @media screen and (max-width: 1000px) {
     background-color: rgba(18, 52, 86, 0.9);
     position: fixed;
@@ -163,18 +177,6 @@ export const SectionMenu = styled.section`
   @media screen and (max-width: 650px) {
     width: 100%;
     border-radius: 0px;
-  }
-`;
-
-export const MenuLinks = styled.a`
-  display: none;
-  @media screen and (max-width: 1000px) {
-    margin-top: 1.5rem;
-    display: block;
-    color: #badc58;
-    font-family: Mulish;
-    font-size: 1.5rem;
-    text-decoration: none;
   }
 `;
 
