@@ -41,7 +41,7 @@ export const TextDiv = styled.div`
 `;
 
 export const RegisterDiv = styled.div`
-  height: 32rem;
+  height: 35rem;
   width: 29rem;
   background-color: white;
   border-radius: 10px;
