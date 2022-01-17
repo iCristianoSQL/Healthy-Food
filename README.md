@@ -1,4 +1,4 @@
-Olá, boa tarde, este é um teste técnico da empresa GCB investimentos.
+Olá, boa tarde, este é um teste técnico.
 
 Para executar o teste, você pode optar tanto por utilizar o:
 
